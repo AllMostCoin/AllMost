@@ -3,379 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AllMost Coin | $ALLMOST | Almost There? Nah, We're ALL Most There! 🚀</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-        body {
-            font-family: 'Press Start 2P', system-ui;
-        }
-        .neon-text {
-            text-shadow: 0 0 10px #22ff00, 0 0 20px #22ff00, 0 0 40px #00ff88;
-        }
-        .hero-bg {
-            background: linear-gradient(45deg, #0a0a0a, #1a1a1a);
-        }
-        .coin-float {
-            animation: float 3s ease-in-out infinite;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-    </style>
+    <title>AllMost Coin</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-black text-white overflow-x-hidden">
-    <!-- NAVBAR -->
-    <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-lg border-b border-lime-400">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-lime-400 rounded-full flex items-center justify-center text-black font-bold text-2xl coin-float">A</div>
-                <div>
-                    <span class="text-2xl font-bold tracking-widest neon-text">ALLMOST</span>
-                </div>
-            </div>
-            <div class="hidden md:flex gap-8 text-sm uppercase tracking-widest">
-                <a href="#about" class="hover:text-lime-400 transition">ABOUT</a>
-                <a href="#tokenomics" class="hover:text-lime-400 transition">TOKENOMICS</a>
-                <a href="#roadmap" class="hover:text-lime-400 transition">ROADMAP</a>
-                <a href="#howtobuy" class="hover:text-lime-400 transition">HOW TO BUY</a>
-                <a href="#community" class="hover:text-lime-400 transition">COMMUNITY</a>
-            </div>
-            <a href="https://dexscreener.com/solana/DZkb9QwxVadomicHGj6ygpfLPZ59kjpqH1wmP411jups" 
-               target="_blank"
-               class="px-6 py-3 bg-lime-400 text-black font-bold uppercase text-sm tracking-widest hover:bg-white transition flex items-center gap-2">
-                <i class="fas fa-chart-line"></i>
-                TRADE NOW
-            </a>
-        </div>
-    </nav>
-
-    <!-- HERO -->
-    <header class="hero-bg min-h-screen flex items-center pt-20">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-8">
-                <div class="inline-flex items-center gap-2 bg-lime-400/10 px-4 py-2 rounded-full text-lime-400 text-xs tracking-widest">
-                    <div class="w-2 h-2 bg-lime-400 rounded-full animate-pulse"></div>
-                    LIVE ON SOLANA • MCAP ~$5K (MICROCAP GEM)
-                </div>
-                
-                <h1 class="text-7xl md:text-8xl font-bold leading-none neon-text">
-                    ALLMOST<br>COIN
-                </h1>
-                
-                <p class="text-2xl text-lime-300 max-w-md">
-                    You're always <span class="line-through text-gray-500">almost</span> making it.<br>
-                    With $ALLMOST, you're <span class="text-white font-bold">ALL MOST</span> there. 🚀
-                </p>
-                
-                <div class="flex flex-wrap gap-4">
-                    <button onclick="copyCA()" 
-                            class="group flex items-center gap-3 bg-white/10 hover:bg-white/20 px-8 py-4 rounded-xl border border-lime-400 transition-all">
-                        <span class="font-mono text-sm">DZkb9QwxVadomicHGj6ygpfLPZ59kjpqH1wmP411jups</span>
-                        <i class="fas fa-copy group-active:scale-90 transition"></i>
-                    </button>
-                    
-                    <a href="https://dexscreener.com/solana/DZkb9QwxVadomicHGj6ygpfLPZ59kjpqH1wmP411jups" 
-                       target="_blank"
-                       class="px-10 py-4 bg-lime-400 text-black font-bold text-xl flex items-center gap-3 hover:scale-105 transition">
-                        BUY $ALLMOST
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                
-                <div class="flex gap-8 text-xs uppercase">
-                    <div>
-                        <span class="block text-lime-400">PRICE</span>
-                        <span class="text-3xl font-mono">$0.000005</span>
-                    </div>
-                    <div>
-                        <span class="block text-lime-400">SUPPLY</span>
-                        <span class="text-3xl font-mono">1B</span>
-                    </div>
-                    <div>
-                        <span class="block text-lime-400">LAUNCHED</span>
-                        <span class="text-3xl font-mono">12 DAYS AGO</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Logo / Hero Visual -->
-            <div class="relative flex justify-center">
-                <div class="w-80 h-80 bg-gradient-to-br from-lime-400 to-cyan-400 rounded-3xl flex items-center justify-center coin-float shadow-2xl shadow-lime-400/50 relative">
-                    <div class="text-center">
-                        <div class="text-8xl mb-4">🚀</div>
-                        <div class="text-black font-black text-5xl tracking-widest">ALLMOST</div>
-                        <div class="text-black/70 text-sm -mt-2">COIN</div>
-                    </div>
-                    <!-- Decorative elements -->
-                    <div class="absolute -top-6 -right-6 text-6xl animate-spin-slow">💎</div>
-                    <div class="absolute -bottom-8 -left-8 text-5xl">🌕</div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Scrolling ticker -->
-        <div class="absolute bottom-8 left-0 w-full overflow-hidden">
-            <div class="flex whitespace-nowrap animate-marquee text-lime-400 text-sm tracking-widest">
-                <span class="mx-8">CA: DZkb9QwxVadomicHGj6ygpfLPZ59kjpqH1wmP411jups</span>
-                <span class="mx-8">• FAIR LAUNCH • NO TAXES • COMMUNITY OWNED •</span>
-                <span class="mx-8">CA: DZkb9QwxVadomicHGj6ygpfLPZ59kjpqH1wmP411jups</span>
-            </div>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#" class="text-lg">Home</a></li>
+                <li><a href="#" class="text-lg">About</a></li>
+                <li><a href="#" class="text-lg">Services</a></li>
+                <li><a href="#" class="text-lg">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-box w-60 h-60">
+            <img src="path/to/professional-token-coin-image.png" alt="AllMost Coin" class="floating-animation">
         </div>
     </header>
-
-    <!-- ABOUT -->
-    <section id="about" class="py-24 bg-zinc-950">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <div class="inline-block bg-lime-400 text-black px-6 py-1 text-xs mb-6">THE MEME THAT TURNS "ALMOST" INTO "ALL MOST"</div>
-            <h2 class="text-5xl font-bold mb-8">The Ultimate Degen Motivational Coin</h2>
-            <p class="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-                Every degen knows the pain... You're <span class="line-through">almost</span> up 100x. You're <span class="line-through">almost</span> at the moon. 
-                You're <span class="line-through">almost</span> rich. 
-                <span class="text-lime-400 font-bold">ALLMOST Coin</span> fixes that. 
-                Launched fair on Solana with zero taxes and a tiny $5K market cap — this is your shot to finally make it.
-            </p>
-            <div class="mt-16 grid md:grid-cols-3 gap-8">
-                <div class="bg-zinc-900 p-8 rounded-2xl border border-lime-400/30">
-                    <i class="fas fa-rocket text-4xl text-lime-400 mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2">Almost → Reality</h3>
-                    <p class="text-gray-400">We take the "almost" out of your portfolio.</p>
-                </div>
-                <div class="bg-zinc-900 p-8 rounded-2xl border border-lime-400/30">
-                    <i class="fas fa-users text-4xl text-lime-400 mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2">Community First</h3>
-                    <p class="text-gray-400">No dev wallet. No taxes. Just degens building together.</p>
-                </div>
-                <div class="bg-zinc-900 p-8 rounded-2xl border border-lime-400/30">
-                    <i class="fas fa-fire text-4xl text-lime-400 mb-4"></i>
-                    <h3 class="font-bold text-xl mb-2">Moon Mission</h3>
-                    <p class="text-gray-400">From microcap to legendary status. Join before the pump.</p>
-                </div>
+    <main>
+        <h1 class="text-5xl">Welcome to AllMost Coin</h1>
+        <h2 class="text-3xl">The Future of Cryptocurrency</h2>
+        <h3 class="text-lg">Join us today!</h3>
+        <p class="text-lg">AllMost Coin is the next generation of digital currency.</p>
+        <div class="icon-container">
+            <div class="icon text-2xl">
+                <i class="icon-class"></i>
+                <div class="circle w-10 h-10 text-lg">1</div>
+            </div>
+            <div class="icon text-2xl">
+                <i class="icon-class"></i>
+                <div class="circle w-10 h-10 text-lg">2</div>
+            </div>
+            <div class="icon text-2xl">
+                <i class="icon-class"></i>
+                <div class="circle w-10 h-10 text-lg">3</div>
             </div>
         </div>
-    </section>
-
-    <!-- TOKENOMICS -->
-    <section id="tokenomics" class="py-24 bg-black border-t border-b border-lime-400">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-5xl font-bold mb-4">TOKENOMICS</h2>
-                <p class="text-lime-400">1 Billion Supply • 0% Buy/Sell Tax • Fair Launch</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="space-y-6">
-                    <div class="flex justify-between items-center bg-zinc-900 p-6 rounded-3xl">
-                        <div>
-                            <div class="text-lime-400 text-sm">TOTAL SUPPLY</div>
-                            <div class="text-4xl font-mono">1,000,000,000</div>
-                        </div>
-                        <div class="text-6xl">📊</div>
-                    </div>
-                    <div class="flex justify-between items-center bg-zinc-900 p-6 rounded-3xl">
-                        <div>
-                            <div class="text-lime-400 text-sm">LIQUIDITY</div>
-                            <div class="text-4xl font-mono">LOCKED / BURNED</div>
-                        </div>
-                        <div class="text-6xl">🔒</div>
-                    </div>
-                </div>
-                <div class="bg-zinc-900 p-8 rounded-3xl text-center flex flex-col justify-center">
-                    <div class="text-6xl mb-6">0%</div>
-                    <div class="text-3xl font-bold">BUY TAX</div>
-                    <div class="h-px bg-lime-400 my-8"></div>
-                    <div class="text-6xl mb-6">0%</div>
-                    <div class="text-3xl font-bold">SELL TAX</div>
-                    <div class="mt-12 text-xs uppercase tracking-widest text-gray-500">Revoke taxes? Already zero. This is the cleanest launch on Solana.</div>
-                </div>
-            </div>
-            
-            <div class="mt-12 text-center text-xs text-gray-400 max-w-md mx-auto">
-                Mint address: DZkb9QwxVadomicHGj6ygpfLPZ59kjpqH1wmP411jups<br>
-                Traded on Meteora • No presale • No team allocation
-            </div>
-        </div>
-    </section>
-
-    <!-- HOW TO BUY -->
-    <section id="howtobuy" class="py-24 bg-zinc-950">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center mb-16">HOW TO BUY $ALLMOST</h2>
-            
-            <div class="space-y-8">
-                <div class="flex gap-8 items-start">
-                    <div class="w-12 h-12 bg-lime-400 text-black rounded-2xl flex items-center justify-center font-bold text-2xl flex-shrink-0">1</div>
-                    <div>
-                        <h3 class="text-2xl font-bold mb-2">Get a Solana Wallet</h3>
-                        <p class="text-gray-400">Phantom, Solflare or Backpack. Download from official sites.</p>
-                    </div>
-                </div>
-                <div class="flex gap-8 items-start">
-                    <div class="w-12 h-12 bg-lime-400 text-black rounded-2xl flex items-center justify-center font-bold text-2xl flex-shrink-0">2</div>
-                    <div>
-                        <h3 class="text-2xl font-bold mb-2">Fund with SOL</h3>
-                        <p class="text-gray-400">Buy SOL on Coinbase/Binance and send to your wallet.</p>
-                    </div>
-                </div>
-                <div class="flex gap-8 items-start">
-                    <div class="w-12 h-12 bg-lime-400 text-black rounded-2xl flex items-center justify-center font-bold text-2xl flex-shrink-0">3</div>
-                    <div>
-                        <h3 class="text-2xl font-bold mb-2">Swap on Meteora or Jupiter</h3>
-                        <p class="text-gray-400">
-                            Go to <a href="https://dexscreener.com/solana/DZkb9QwxVadomicHGj6ygpfLPZ59kjpqH1wmP411jups" target="_blank" class="text-lime-400 underline">DexScreener</a> 
-                            → click trade → or use Jupiter.ag and paste the contract address.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="mt-16 bg-black border border-lime-400 rounded-3xl p-8 text-center">
-                <a href="https://dexscreener.com/solana/DZkb9QwxVadomicHGj6ygpfLPZ59kjpqH1wmP411jups" 
-                   target="_blank"
-                   class="inline-flex items-center gap-4 text-3xl font-bold text-lime-400 hover:text-white transition">
-                    TRADE ON DEXSCREENER RIGHT NOW 
-                    <span class="text-5xl">→</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ROADMAP -->
-    <section id="roadmap" class="py-24 bg-black">
-        <div class="max-w-5xl mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center mb-16">ROADMAP TO THE MOON</h2>
-            
-            <div class="grid md:grid-cols-4 gap-6">
-                <div class="bg-zinc-900 p-8 rounded-3xl border border-lime-400/50">
-                    <div class="text-lime-400 text-sm mb-4">PHASE 1 • DONE</div>
-                    <div class="text-2xl font-bold mb-6">Fair Launch</div>
-                    <ul class="space-y-4 text-sm">
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-lime-400"></i> Deployed on Solana</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-lime-400"></i> Meteora liquidity</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-lime-400"></i> 1B supply, 0% tax</li>
-                    </ul>
-                </div>
-                
-                <div class="bg-zinc-900 p-8 rounded-3xl">
-                    <div class="text-lime-400 text-sm mb-4">PHASE 2 • NOW</div>
-                    <div class="text-2xl font-bold mb-6">Community Takeoff</div>
-                    <ul class="space-y-4 text-sm">
-                        <li class="flex items-center gap-3">✦ Create official Twitter & Telegram</li>
-                        <li class="flex items-center gap-3">✦ Viral marketing push</li>
-                        <li class="flex items-center gap-3">✦ Meme contest (win SOL!)</li>
-                    </ul>
-                </div>
-                
-                <div class="bg-zinc-900 p-8 rounded-3xl">
-                    <div class="text-lime-400 text-sm mb-4">PHASE 3</div>
-                    <div class="text-2xl font-bold mb-6">Listings & Growth</div>
-                    <ul class="space-y-4 text-sm">
-                        <li class="flex items-center gap-3">✦ Birdeye & more trackers</li>
-                        <li class="flex items-center gap-3">✦ CMC & CG listing</li>
-                        <li class="flex items-center gap-3">✦ Influencer raids</li>
-                    </ul>
-                </div>
-                
-                <div class="bg-zinc-900 p-8 rounded-3xl border border-lime-400/50">
-                    <div class="text-lime-400 text-sm mb-4">PHASE 4 • MOON</div>
-                    <div class="text-2xl font-bold mb-6">AllMost Rich</div>
-                    <ul class="space-y-4 text-sm">
-                        <li class="flex items-center gap-3">✦ CEX listings</li>
-                        <li class="flex items-center gap-3">✦ $1M+ MCAP</li>
-                        <li class="flex items-center gap-3">✦ Legendary status</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- COMMUNITY -->
-    <section id="community" class="py-24 bg-gradient-to-b from-black to-zinc-950">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-5xl font-bold mb-8">JOIN THE ALLMOST CREW</h2>
-            <p class="text-xl text-gray-300 mb-12">The real ones are already here. Be early. Be ALLMOST.</p>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <a href="#" onclick="alert('Create your Twitter @AllMostCoin_sol and update this link!')" 
-                   class="bg-zinc-900 hover:bg-lime-400 hover:text-black transition p-8 rounded-3xl flex flex-col items-center gap-4">
-                    <i class="fab fa-x-twitter text-4xl"></i>
-                    <div class="font-bold">X / TWITTER</div>
-                    <div class="text-xs text-lime-400">@AllMostCoin_sol</div>
-                </a>
-                <a href="#" onclick="alert('Create your Telegram @allmostcoinchat and update this link!')" 
-                   class="bg-zinc-900 hover:bg-lime-400 hover:text-black transition p-8 rounded-3xl flex flex-col items-center gap-4">
-                    <i class="fab fa-telegram text-4xl"></i>
-                    <div class="font-bold">TELEGRAM</div>
-                    <div class="text-xs text-lime-400">t.me/allmostcoinchat</div>
-                </a>
-                <a href="https://dexscreener.com/solana/DZkb9QwxVadomicHGj6ygpfLPZ59kjpqH1wmP411jups" 
-                   target="_blank"
-                   class="bg-zinc-900 hover:bg-lime-400 hover:text-black transition p-8 rounded-3xl flex flex-col items-center gap-4">
-                    <i class="fas fa-chart-line text-4xl"></i>
-                    <div class="font-bold">DEXSCREENER</div>
-                </a>
-                <div onclick="copyCA()" 
-                     class="bg-zinc-900 hover:bg-lime-400 hover:text-black transition p-8 rounded-3xl flex flex-col items-center gap-4 cursor-pointer">
-                    <i class="fas fa-copy text-4xl"></i>
-                    <div class="font-bold">COPY CA</div>
-                </div>
-            </div>
-            
-            <div class="mt-16 text-xs uppercase tracking-widest text-gray-500">
-                Built for the degens who were always "almost" there.<br>
-                Contract: <span class="font-mono text-lime-400">DZkb9QwxVadomicHGj6ygpfLPZ59kjpqH1wmP411jups</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-black py-12 border-t border-lime-400">
-        <div class="max-w-7xl mx-auto px-6 text-center text-xs text-gray-500">
-            <p>© 2026 AllMost Coin • Not financial advice. DYOR. Crypto is risky. But you're ALLMOST gonna make it anyway.</p>
-            <p class="mt-4">Mint Address: DZkb9QwxVadomicHGj6ygpfLPZ59kjpqH1wmP411jups</p>
-        </div>
+    </main>
+    <footer>
+        <p class="text-lg">© 2026 AllMostCoin. All rights reserved.</p>
     </footer>
-
-    <script>
-        function tailwindInit() {
-            // Already using Tailwind via CDN
-        }
-        
-        function copyCA() {
-            navigator.clipboard.writeText("DZkb9QwxVadomicHGj6ygpfLPZ59kjpqH1wmP411jups");
-            const notif = document.createElement("div");
-            notif.className = "fixed bottom-10 left-1/2 -translate-x-1/2 bg-lime-400 text-black px-8 py-3 rounded-2xl font-bold shadow-2xl";
-            notif.textContent = "CA COPIED! 📋";
-            document.body.appendChild(notif);
-            setTimeout(() => notif.remove(), 2500);
-        }
-        
-        // Auto-scroll marquee
-        const marquee = document.querySelector('.animate-marquee');
-        if (marquee) marquee.style.animation = 'marquee 25s linear infinite';
-        
-        // Tailwind script already loaded
-        window.onload = () => {
-            console.log('%cAllMost Coin website ready 🚀', 'color:lime; font-family:monospace');
-        };
-    </script>
-    <style>
-        @keyframes marquee {
-            from { transform: translateX(0); }
-            to { transform: translateX(-50%); }
-        }
-        .animate-marquee {
-            animation: marquee 25s linear infinite;
-        }
-        .animate-spin-slow {
-            animation: spin 20s linear infinite;
-        }
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-    </style>
 </body>
 </html>
